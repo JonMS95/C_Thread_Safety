@@ -54,7 +54,7 @@ int main(int argc, char** argv)
     // For example, if two threads try to increment the same variable at the same time, they will get the
     // original variable's value, then increment it, and then overwrite the original variable. If this process
     // is performed at the same time in both threads, then the original variable will only be incremented once
-    // instead of twice.
+    // instead of twice. In the second case shown above, the code is known as "non-thread-safe".
 
     return 0;
 }
