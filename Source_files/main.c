@@ -107,5 +107,12 @@ int main(int argc, char** argv)
     // This happens because these processes are forced not to be parallel, as only one of them is able to access
     // the memory address where the "counter" variable is found at the same time.
 
+    // Final thoughts:
+    //  ·Be careful. Threading may lead threads to use the memory twice or more.
+    //  ·Using them is not always a good idea, it may not be even necessary.
+    //  ·GUI + backend processing is such a common use case.
+    //  ·MUTEX locks perform better when only small pieces of the code get protected.
+    //  ·Keep it simple, but remember threads are not any kind of magical stuff.
+
     return 0;
 }
